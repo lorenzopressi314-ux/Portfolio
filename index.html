@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lorenzo Pressi — Designer</title>
+  <meta name="description" content="Portfolio di Lorenzo Pressi, designer visivo e digitale: branding, UI/UX, direzione artistica.">
+  <meta property="og:title" content="Lorenzo Pressi — Designer">
+  <meta property="og:description" content="Branding, UI/UX e direzione artistica.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top" data-page="home">
+  <a class="skip" href="#lavori">Vai ai lavori</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo" data-site-name>Lorenzo Pressi</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Apri il menu"><span></span><span></span></button>
+      <nav class="nav" id="nav">
+        <a href="#lavori">Lavori</a>
+        <a href="#about">Chi sono</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="eyebrow" id="hero-role"></p>
+      <h1 class="display hero-title">
+        Design che <em>racconta</em><br>storie e costruisce<br>identità.
+      </h1>
+      <div class="hero-foot">
+        <p class="lead" id="hero-intro"></p>
+        <p class="availability" id="availability"><span class="dot"></span>Disponibile per nuovi progetti</p>
+      </div>
+    </section>
+
+    <section class="section container" id="lavori">
+      <div class="section-head">
+        <h2 class="section-title">Lavori selezionati <sup id="work-count"></sup></h2>
+        <div class="filters" id="filters" role="group" aria-label="Filtra per categoria"></div>
+      </div>
+      <div class="work-grid" id="work-grid"></div>
+    </section>
+
+    <section class="section container about" id="about">
+      <h2 class="section-title">Chi sono</h2>
+      <div class="about-grid">
+        <div class="about-text reveal" id="about-text"></div>
+        <div class="about-side">
+          <h3 class="label">Esperienza</h3>
+          <ul class="experience" id="experience"></ul>
+          <h3 class="label">Strumenti</h3>
+          <ul class="tools" id="tools"></ul>
+        </div>
+      </div>
+      <h3 class="label services-label">Cosa faccio</h3>
+      <ul class="services" id="services"></ul>
+    </section>
+
+    <section class="section contact" id="contatti">
+      <div class="container">
+        <p class="eyebrow">Hai un progetto in mente?</p>
+        <h2 class="display contact-title">Parliamone.</h2>
+        <div class="contact-row">
+          <a class="contact-email" id="contact-email" href="#"></a>
+          <button type="button" class="btn" id="copy-email">Copia email</button>
+        </div>
+        <ul class="contact-socials" id="contact-socials"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
