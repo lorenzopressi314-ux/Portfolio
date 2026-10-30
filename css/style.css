@@ -139,8 +139,11 @@ ul { list-style: none; margin: 0; padding: 0; }
 .about-text p + p { color: var(--muted); }
 .experience { margin-bottom: 40px; }
 .experience li { display: grid; grid-template-columns: 110px 1fr; gap: 2px 16px; padding: 14px 0; border-top: 1px solid var(--line); font-size: 15px; }
-.experience li span { color: var(--muted); grid-row: span 2; }
+.experience li span { color: var(--muted); }
+.experience li div { display: flex; flex-direction: column; }
 .experience li em { font-style: normal; color: var(--muted); }
+.experience li small { font-size: 14px; color: var(--muted); margin-top: 6px; line-height: 1.45; }
+.languages-label { margin-top: 32px; }
 .tools { display: flex; flex-wrap: wrap; gap: 8px; }
 .tools li { font-size: 14px; border: 1px solid var(--line); border-radius: 999px; padding: 5px 14px; }
 .services-label { margin-top: 80px; }
@@ -245,6 +248,5 @@ ul { list-style: none; margin: 0; padding: 0; }
   .services li + li, .results li + li { border-top: 1px solid var(--line); }
   .services li { gap: 12px; }
   .experience li { grid-template-columns: 1fr; }
-  .experience li span { grid-row: auto; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
 }

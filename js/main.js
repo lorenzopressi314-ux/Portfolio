@@ -94,6 +94,7 @@ function renderHome() {
   $("#hero-role").textContent = `${SITE.role} — ${SITE.location}`;
   $("#hero-intro").textContent = SITE.intro;
   $("#availability").hidden = !SITE.available;
+  $("#availability-text").textContent = SITE.availability;
 
   // Filtri
   const cats = ["Tutti", ...new Set(PROJECTS.flatMap((p) => p.categories))];
@@ -125,9 +126,17 @@ function renderHome() {
     .map((s, i) => `<li class="reveal"><span class="num">${String(i + 1).padStart(2, "0")}</span><div><h3>${escapeHTML(s.title)}</h3><p>${escapeHTML(s.text)}</p></div></li>`)
     .join("");
   $("#tools").innerHTML = SITE.tools.map((t) => `<li>${escapeHTML(t)}</li>`).join("");
-  $("#experience").innerHTML = SITE.experience
-    .map((x) => `<li><span>${escapeHTML(x.years)}</span><strong>${escapeHTML(x.title)}</strong><em>${escapeHTML(x.place)}</em></li>`)
-    .join("");
+  const timeline = (items) =>
+    items
+      .map(
+        (x) => `<li><span>${escapeHTML(x.years)}</span><div><strong>${escapeHTML(x.title)}</strong><em>${escapeHTML(x.place)}</em>${
+          x.note ? `<small>${escapeHTML(x.note)}</small>` : ""
+        }</div></li>`
+      )
+      .join("");
+  $("#experience").innerHTML = timeline(SITE.experience);
+  $("#education").innerHTML = timeline(SITE.education);
+  $("#languages").innerHTML = SITE.languages.map((t) => `<li>${escapeHTML(t)}</li>`).join("");
 
   // Contatti
   const mail = $("#contact-email");
